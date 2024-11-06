@@ -1,0 +1,21 @@
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="int">{{ message }} {{ code }}</div>
+
+<script>
+  const { createApp, ref } = Vue
+  var app = {
+    setup() {
+      const message = ref('Hello vue!')
+      const code = ref('This is a code snippet.')
+      return {
+        message,
+        code
+      }
+    }
+  }
+  createApp(app).mount('#int')
+  // .abc 类名 class="abc"
+  // #def id id="def"
+
+</script>
